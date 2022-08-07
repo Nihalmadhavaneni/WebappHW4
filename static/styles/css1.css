@@ -1,0 +1,28 @@
+html {
+    background-image: linear-gradient(to right ,rgb(255, 238, 0),#ffea66, #fff5a5);
+}
+
+a {
+    text-decoration: none;
+    background-color: rgb(65, 139, 223);
+    margin: 13px;
+    padding: 3px;
+    margin-left: 30%;
+}
+label{
+    font-family: monospace;
+}
+
+h3{
+    margin-left: 20%;
+    font-size: 30px;
+}
+
+form{
+font-size: 30px;
+    margin-left: 30%;
+
+}
+h1{
+    font-size: 40px;
+}

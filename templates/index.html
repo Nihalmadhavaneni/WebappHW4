@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>hw4</title>
+    <center><h1>Yellow Pages</h1></center>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/css1.css') }}">
+
+    <style>
+        .column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+     input[type=text], select {
+            width: 30%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+          }
+          
+     input[type=email], select {
+            width: 30%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+          }
+
+          
+     input[type=textarea], select {
+            width: 30%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+          }
+
+
+         
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  margin-left: 30%;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+</style>
+
+           
+</head>
+
+<body>
+          <h3> Enter company details</h3>
+    <form action="" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"/>
+        <br />
+        <label for="email">Email: </label>
+        <input type="email" id="email" name="email" />
+<br>
+        <label for="cnumber">Number:</label>
+        <input type="text" minlength="10" maxlength="10" name="cnumber" id="c_number" />
+        <br />
+
+        <label for="addr">Address:</label>
+        <input type="textarea" id="addr" name="addr"/>
+        <br />
+
+
+        <input type="submit" style="display: none" />
+        
+    <h6>
+        
+        press enter after entering the details </h6>
+      
+    </form>
+    <a href="stds" class="button">Company List</a> 
+<br />
+
+    <br />
+
+    <h3>Delete A company by number</h3>
+    <form action="/delete" method="post">
+        <input type="text" name="del"/>
+        <input type="submit" style="display: none" />
+        
+    <h6>
+        press enter after entering the details
+    </h6>
+    </form>
+    <br />
+
+    <h3>Update</h3>
+    <form action="/update" method="post">
+        
+        <label for="cnumber">Number:</label>
+        <input type="text" minlength="10" maxlength="10" name="cnumber" id="cnumber" />
+        <br />
+        <label for="name">Name:</label>
+        <input type="text" id="st_name" name="name"/>
+        <br />
+        <label for="email">Email: </label>
+        <input type="email" id="st_email" name="email" /><br>
+        <label for="addr">Address:</label>
+        <input type="textarea" id="st_addr" name="addr"/>
+        <br />
+
+        
+        <input type="submit" style="display: none" />
+    <h6>
+        press enter after entering the details
+    </h6>
+    </form>
+</body>
+
+</html>
